@@ -1,0 +1,1 @@
+Mutant 5 does not fail on boundary-value tests

@@ -1,0 +1,1 @@
+Mutant 3 does not fail on boundary-value tests

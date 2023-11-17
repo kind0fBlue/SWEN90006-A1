@@ -1,0 +1,1 @@
+Mutant 1 does not fail on boundary-value tests

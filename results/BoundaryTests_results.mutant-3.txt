@@ -1,0 +1,190 @@
+Testsuite: swen90006.mfa.BoundaryTests
+Tests run: 65, Failures: 0, Errors: 13, Skipped: 0, Time elapsed: 0.038 sec
+------------- Standard Output ---------------
+Authentication status is 1: NONE
+Authentication status is 2: null
+Authentication status is 1: DOUBLE
+Authentication status is 2: null
+Authentication status is 1: SINGLE
+Authentication status is 2: null
+Authentication status is 1: NONE
+Authentication status is 2: null
+Authentication status is 1: NONE
+Authentication status is 2: null
+Authentication status is 1: TRIPLE
+Authentication status is 2: null
+Authentication status is 1: DOUBLE
+Authentication status is 2: null
+------------- ---------------- ---------------
+
+Testcase: oneNotLetterUsername took 0.005 sec
+Testcase: anotherTest took 0 sec
+Testcase: oneNotASCIIazLetterUsername1 took 0 sec
+Testcase: oneNotASCIIazLetterUsername2 took 0 sec
+Testcase: len7Password took 0.001 sec
+Testcase: oneNotASCIIAZLetterUsername took 0 sec
+Testcase: len3Username took 0 sec
+Testcase: getDataNotLoggedIn took 0 sec
+Testcase: doubleDeviceMatch took 0.003 sec
+	Caused an ERROR
+Incorrect device ID: iphone1 for user oaaa
+swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone1 for user oaaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.doubleDeviceMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: twoInputRightPassword took 0 sec
+Testcase: doubleLen2InboundData took 0 sec
+	Caused an ERROR
+Incorrect device ID: iphone1 for user abaa
+swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone1 for user abaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.doubleLen2InboundData(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: matchDeviceNoFace took 0 sec
+	Caused an ERROR
+Incorrect device ID: iphone2 for user daaa
+swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone2 for user daaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.matchDeviceNoFace(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: emptyPassword took 0.001 sec
+Testcase: twoInputMismatchPassword took 0 sec
+Testcase: faceDeviceNotMatch took 0 sec
+Testcase: len1Password took 0 sec
+Testcase: noDigitPassword took 0 sec
+Testcase: notLetterUsername took 0 sec
+Testcase: NoneDeviceMisMatch took 0.001 sec
+Testcase: noRegisteredFace took 0 sec
+Testcase: singleDeviceNotRegistered took 0 sec
+Testcase: noLetterPassword took 0 sec
+Testcase: doubleRightOutboundLen2Data took 0.001 sec
+	Caused an ERROR
+Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.IncorrectDeviceIDException>
+java.lang.Exception: Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.IncorrectDeviceIDException>
+Caused by: swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone1 for user acaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.doubleRightOutboundLen2Data(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: isDeviceIDIsFace took 0 sec
+Testcase: specialCharMultiple took 0 sec
+Testcase: isDeviceIDNoFace took 0 sec
+Testcase: len3Password took 0 sec
+Testcase: NoneStatusFace took 0 sec
+Testcase: nonExistentNameTwoInput took 0 sec
+Testcase: noRegisteredDeviceMisMatchingface took 0 sec
+Testcase: NoneDeviceMatch took 0.001 sec
+Testcase: len2Username took 0 sec
+Testcase: noRegisteredDeviceMatchingface took 0 sec
+Testcase: faceidMatches took 0 sec
+Testcase: singleDeviceMatch took 0 sec
+	Caused an ERROR
+Incorrect device ID: iphone1 for user jaaa
+swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone1 for user jaaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.PartitioningTests.singleDeviceMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: singleDeviceNotMatch took 0 sec
+Testcase: getDataNotUser took 0 sec
+Testcase: aFailedTest took 0 sec
+Testcase: aTest took 0 sec
+Testcase: existingUsername took 0 sec
+Testcase: noSpecialCharPassword took 0 sec
+Testcase: faceidNotMatches took 0 sec
+Testcase: hasFaceNotMatch took 0 sec
+	Caused an ERROR
+Incorrect device ID: iphone2 for user caaa
+swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone2 for user caaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.hasFaceNotMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: allLetterUsername took 0 sec
+Testcase: longer8Psswrd took 0 sec
+Testcase: doubleLeftOutboundLen2Data took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.IncorrectDeviceIDException>
+java.lang.Exception: Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.IncorrectDeviceIDException>
+Caused by: swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone1 for user zaaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.doubleLeftOutboundLen2Data(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: doubleLen1Data took 0 sec
+	Caused an ERROR
+Incorrect device ID: iphone1 for user yaaa
+swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone1 for user yaaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.doubleLen1Data(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: oneLetterOneDigitValid took 0 sec
+Testcase: noRegisteredDeviceNoRegisteredFace took 0 sec
+Testcase: emptyUsername took 0 sec
+Testcase: deviceButNotDouble took 0 sec
+Testcase: nonExistentNameFourInput took 0 sec
+Testcase: len1Username took 0.001 sec
+Testcase: deviceNotMatch took 0 sec
+Testcase: oneSpecialCharNullDevice took 0 sec
+Testcase: doubleEmptyData took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.IncorrectDeviceIDException>
+java.lang.Exception: Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.IncorrectDeviceIDException>
+Caused by: swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone1 for user xaaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.doubleEmptyData(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: multipleLetterPsswrd took 0 sec
+Testcase: pushNoUser took 0 sec
+Testcase: fourInputMismatchPassword took 0 sec
+Testcase: anExceptionTest took 0 sec
+Testcase: tripleDeviceMatch took 0 sec
+	Caused an ERROR
+Incorrect device ID: iphone1 for user qaaa
+swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone1 for user qaaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.tripleDeviceMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: doubleDeviceMisMatch took 0 sec
+	Caused an ERROR
+Incorrect device ID: iphone1 for user paaa
+swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone1 for user paaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.doubleDeviceMisMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: singleGetData took 0 sec
+Testcase: tripleDeviceMisMatch took 0.001 sec
+	Caused an ERROR
+Incorrect device ID: iphone1 for user raaa
+swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone1 for user raaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.tripleDeviceMisMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: fourInputTriple took 0 sec
+	Caused an ERROR
+Incorrect device ID: iphone2 for user baaa
+swen90006.mfa.IncorrectDeviceIDException: Incorrect device ID: iphone2 for user baaa
+	at swen90006.mfa.MFA.respondToPushNotification(MFA.java:275)
+	at swen90006.mfa.MFA.login(MFA.java:235)
+	at swen90006.mfa.PartitioningTests.fourInputTriple(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+

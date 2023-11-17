@@ -1,0 +1,482 @@
+Testsuite: swen90006.mfa.BoundaryTests
+Tests run: 65, Failures: 0, Errors: 46, Skipped: 0, Time elapsed: 0.035 sec
+
+Testcase: oneNotLetterUsername took 0.005 sec
+Testcase: anotherTest took 0 sec
+Testcase: oneNotASCIIazLetterUsername1 took 0 sec
+Testcase: oneNotASCIIazLetterUsername2 took 0.001 sec
+Testcase: len7Password took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username ijkl does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.BoundaryTests.len7Password(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: oneNotASCIIAZLetterUsername took 0 sec
+Testcase: len3Username took 0 sec
+Testcase: getDataNotLoggedIn took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.UnauthenticatedUserException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.UnauthenticatedUserException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username aeaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.getDataNotLoggedIn(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: doubleDeviceMatch took 0 sec
+	Caused an ERROR
+Username oaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username oaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.doubleDeviceMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: twoInputRightPassword took 0 sec
+	Caused an ERROR
+Username aaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username aaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.twoInputRightPassword(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: doubleLen2InboundData took 0 sec
+	Caused an ERROR
+Username abaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username abaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.doubleLen2InboundData(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: matchDeviceNoFace took 0 sec
+	Caused an ERROR
+Username daaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username daaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.matchDeviceNoFace(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: emptyPassword took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username abcd does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.emptyPassword(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: twoInputMismatchPassword took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.IncorrectPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.IncorrectPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username aaab does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.twoInputMismatchPassword(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: faceDeviceNotMatch took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.IncorrectDeviceIDException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.IncorrectDeviceIDException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username uaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.faceDeviceNotMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: len1Password took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username efgh does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.len1Password(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: noDigitPassword took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username ijkl does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.noDigitPassword(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: notLetterUsername took 0 sec
+Testcase: NoneDeviceMisMatch took 0 sec
+	Caused an ERROR
+Username naaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username naaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.NoneDeviceMisMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: noRegisteredFace took 0 sec
+	Caused an ERROR
+Username taaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username taaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.noRegisteredFace(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: singleDeviceNotRegistered took 0 sec
+	Caused an ERROR
+Username laaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username laaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.singleDeviceNotRegistered(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: noLetterPassword took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username ijkl does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.noLetterPassword(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: doubleRightOutboundLen2Data took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username acaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.doubleRightOutboundLen2Data(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: isDeviceIDIsFace took 0 sec
+	Caused an ERROR
+Username ghgh does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username ghgh does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.isDeviceIDIsFace(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: specialCharMultiple took 0 sec
+	Caused an ERROR
+Username ijij does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username ijij does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.specialCharMultiple(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: isDeviceIDNoFace took 0 sec
+	Caused an ERROR
+Username efef does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username efef does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.isDeviceIDNoFace(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: len3Password took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username ijkl does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.len3Password(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: NoneStatusFace took 0 sec
+	Caused an ERROR
+Username vaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username vaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.NoneStatusFace(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: nonExistentNameTwoInput took 0 sec
+Testcase: noRegisteredDeviceMisMatchingface took 0 sec
+	Caused an ERROR
+Username gaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username gaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.noRegisteredDeviceMisMatchingface(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: NoneDeviceMatch took 0.001 sec
+	Caused an ERROR
+Username maaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username maaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.NoneDeviceMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: len2Username took 0 sec
+Testcase: noRegisteredDeviceMatchingface took 0 sec
+	Caused an ERROR
+Username faaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username faaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.noRegisteredDeviceMatchingface(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: faceidMatches took 0 sec
+	Caused an ERROR
+Username saaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username saaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.faceidMatches(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: singleDeviceMatch took 0 sec
+	Caused an ERROR
+Username jaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username jaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.singleDeviceMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: singleDeviceNotMatch took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.IncorrectDeviceIDException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.IncorrectDeviceIDException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username kaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.singleDeviceNotMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: getDataNotUser took 0 sec
+Testcase: aFailedTest took 0 sec
+Testcase: aTest took 0 sec
+Testcase: existingUsername took 0.001 sec
+Testcase: noSpecialCharPassword took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.InvalidPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username abab does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.noSpecialCharPassword(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: faceidNotMatches took 0 sec
+	Caused an ERROR
+Username taaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username taaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.faceidNotMatches(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: hasFaceNotMatch took 0 sec
+	Caused an ERROR
+Username caaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username caaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.hasFaceNotMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: allLetterUsername took 0 sec
+Testcase: longer8Psswrd took 0 sec
+	Caused an ERROR
+Username mnmn does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username mnmn does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.longer8Psswrd(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: doubleLeftOutboundLen2Data took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username zaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.doubleLeftOutboundLen2Data(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: doubleLen1Data took 0 sec
+	Caused an ERROR
+Username yaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username yaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.doubleLen1Data(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: oneLetterOneDigitValid took 0 sec
+	Caused an ERROR
+Username mnop does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username mnop does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.oneLetterOneDigitValid(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: noRegisteredDeviceNoRegisteredFace took 0 sec
+	Caused an ERROR
+Username haaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username haaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.noRegisteredDeviceNoRegisteredFace(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: emptyUsername took 0 sec
+Testcase: deviceButNotDouble took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.UnauthenticatedUserException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.UnauthenticatedUserException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username adaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.deviceButNotDouble(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: nonExistentNameFourInput took 0 sec
+Testcase: len1Username took 0 sec
+Testcase: deviceNotMatch took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.IncorrectDeviceIDException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.IncorrectDeviceIDException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username eaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.deviceNotMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: oneSpecialCharNullDevice took 0 sec
+	Caused an ERROR
+Username cdcd does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username cdcd does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.oneSpecialCharNullDevice(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: doubleEmptyData took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<java.lang.IndexOutOfBoundsException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username xaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.doubleEmptyData(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: multipleLetterPsswrd took 0 sec
+	Caused an ERROR
+Username klkl does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username klkl does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.multipleLetterPsswrd(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: pushNoUser took 0 sec
+Testcase: fourInputMismatchPassword took 0 sec
+	Caused an ERROR
+Unexpected exception, expected<swen90006.mfa.IncorrectPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+java.lang.Exception: Unexpected exception, expected<swen90006.mfa.IncorrectPasswordException> but was<swen90006.mfa.InvalidUsernameException>
+Caused by: swen90006.mfa.InvalidUsernameException: Username iaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.fourInputMismatchPassword(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: anExceptionTest took 0 sec
+Testcase: tripleDeviceMatch took 0 sec
+	Caused an ERROR
+Username qaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username qaaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.tripleDeviceMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: doubleDeviceMisMatch took 0 sec
+	Caused an ERROR
+Username paaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username paaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.doubleDeviceMisMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: singleGetData took 0 sec
+	Caused an ERROR
+Username waaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username waaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.singleGetData(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: tripleDeviceMisMatch took 0 sec
+	Caused an ERROR
+Username raaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username raaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.tripleDeviceMisMatch(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: fourInputTriple took 0 sec
+	Caused an ERROR
+Username baaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+swen90006.mfa.InvalidUsernameException: Username baaa does not comply with the requirements
+	- must contains at least 4 characters and contain only letters (a-z, A-Z)
+	at swen90006.mfa.MFA.register(MFA.java:132)
+	at swen90006.mfa.PartitioningTests.fourInputTriple(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+

@@ -1,0 +1,1 @@
+Mutant 4 does not fail on boundary-value tests
